@@ -1,13 +1,180 @@
+.App {
+  display: flex;
+  height: 100vh;
+}
+.left-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  /* border-right: 1px solid #ddd; */
+  background-color: #292929;
+  width: 20%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #f30050;
+}
+.logo {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.option-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: transparent;  /* Makes the button background transparent */
+  color: white;   /* Assuming you want the text color to be white, adjust if needed */   /* Adds a border to make them visible while transparent */
+  transition: background-color 0.3s;
+  border: none;   /* Removing any borders */
+  outline: none;
+  box-shadow: none;
+}
+.option-btn:hover{
+  background-color: #f30050;  /* Desired hover background color */
+  color: white;
+}
+.right-panel {
+  flex: 3;
+  padding: 20px;
+  
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container {
+  position: relative;
+  flex: 2;
+}
+.search-container input {
+  background-color: #2c0d22;
+  color: white;
+  border: 1px solid #3a3a3a;
+  padding: 10px;
+  border-radius: 15px; /* Rounds the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional: Adds a subtle shadow */
+  width: 30%;
+}
+
+/* Placeholder styling remains unchanged */
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+}
+.sidebar {
+  background-color: #292929;
+  /* ... other existing styles ... */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5; /* Add this line. You can adjust the value as needed (0 for fully transparent, 1 for fully opaque) */
+}
+
+.connect-btn {
+  background: linear-gradient(90deg, #652c60, #77103d); /* Gradient background */
+  color: white;  /* Text color */
+  border: none;  /* Remove any default borders */
+  outline: none;  /* Remove focus outline for a cleaner appearance */
+  padding: 10px 30px;  /* Add some padding for better appearance */
+  border-radius: 100px; /* Smooth out the button by rounding the corners */
+  cursor: pointer;  /* Hand cursor on hover for better UX */
+  transition: opacity 0.3s;   /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the connect button */
+.connect-btn:hover {
+  opacity: 0.8; /* Slight transparency on hover for a subtle effect */
+}
+
+
+.results-title {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.info-box {
+  width: 279px; 
+  height: 188px;
+  padding: 10px;
+  /* margin: 10px; */
+  border: 0;
+  position: relative;
+  background-color: #3a0555; 
+  color: white;  
+  border-radius: 10px;  /* Adding border-radius to smooth out the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Adding a subtle shadow */
+  
+
+}
+  /* Setting the text color to white */
+.info-box p,
+.info-box h1,
+.info-box h2 {
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* This ensures padding and borders do not increase the size of the elements */
+}
+
+.info-btn {
+  width: 40px;    /* increased button width */
+  height: 40px;   /* increased button height */
+  border-radius: 50%;  /* make it round */
+  background-color: #940251;   /* specified color */
+  color: white;   /* text color */
+  font-size: 20px;  /* increased font size for the 'i' */
+  /* ... other existing styles ... */
+  display: flex;  /* using flexbox for centering */
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+}
+
+/* If the button has any hover effects or transitions you'd like to add */
+.info-btn:hover {
+  background-color: #b00461; /* A slightly brighter color on hover */
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* align the items vertically centered */
+}
+/* Assuming the buttons are directly inside the .sidebar class */
+.sidebar button {
+  background-color: transparent;  /* Makes the button background transparent */
+  color: white;   /* Assuming you want the text color to be white, adjust if needed */
+  border: 1px solid white;   /* Adds a border to make them visible while transparent */
+  transition: background-color 0.3s;   /* Smooth transition for hover effects */
+}
+
+/* Hover state */
+.sidebar button:hover {
+  background-color: #f30050;  /* Desired hover background color */
+  color: white;   /* Keeps the text color white on hover, adjust if needed */
 }

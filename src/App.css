@@ -1,38 +1,112 @@
 .App {
-  text-align: center;
+  display: flex;
+  height: 100vh;
+  background-image: url("./3cb3d57b1898d0d4ca08cb43c3373b86.png");
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: 170px center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar {
+  width: 25%;
+  background-color: grey;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.logo{
+  font-family: 'Pacifico';
+  font-size: 32px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.log{
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  margin-right: 10px; /* Add some spacing between logo and text */ /* Path to your logo image */
+  background-size: cover;
+  background-position: center;
+  background-image: url('./Vector.jpg');
+}
+.sidebar > button {
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  width: 75%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-btn, .connect-btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-results-title {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.info-box-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: calc(100vh - 100px); /* Adjust the value to fit your layout */
+  overflow: auto;
+
+}
+.info-row {
+  display: flex;
+  width: 100%;
+}
+.info-box {
+  /* border: 1px solid #ddd; */
+  padding: 10px;
+  position: relative;
+  margin: 10px;
+}
+p{
+  padding: 5px;
+}
+.info-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+/* Existing styles remain unchanged... */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px 40px 10px 10px; /* Right padding for the icon space */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex-grow: 1; /* Allows it to take up space */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.connect-btn {
+  margin-left: 20px; /* Space between the search bar and the connect button */
 }
